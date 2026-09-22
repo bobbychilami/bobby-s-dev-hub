@@ -65,6 +65,7 @@
 }
 
 :root {
+  color-scheme: dark;
   --radius: 0.5rem;
   --background: oklch(0.16 0.004 285);
   --foreground: oklch(0.95 0.012 90);
@@ -147,9 +148,39 @@
     letter-spacing: 0;
   }
 
-  html { scroll-behavior: smooth; scroll-padding-top: 4rem; }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 4rem;
+  }
 
-  a, button, summary { outline-color: var(--color-ring); outline-offset: 4px; }
+  a,
+  button,
+  summary {
+    outline-color: var(--color-ring);
+    outline-offset: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-primary);
+    color: var(--color-primary-foreground);
+  }
+}
+
+@utility bg-grid-fade {
+  background-image:
+    linear-gradient(
+      to right,
+      color-mix(in oklab, var(--color-foreground) 6%, transparent) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      to bottom,
+      color-mix(in oklab, var(--color-foreground) 6%, transparent) 1px,
+      transparent 1px
+    );
+  background-size: 52px 52px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 35%, transparent 100%);
+  -webkit-mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 35%, transparent 100%);
 }
 
 @utility reveal {
@@ -157,11 +188,21 @@
 }
 
 @keyframes reveal {
-  from { opacity: 0; transform: translateY(0.875rem); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(0.875rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-  .reveal { animation: none; }
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    animation: none;
+  }
 }
