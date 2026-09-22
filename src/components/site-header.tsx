@@ -44,7 +44,7 @@ export function SiteHeader() {
           {navSections.map((item) => (
             <a
               key={item.id}
-              href={`/#${item.id}`}
+              href={`${import.meta.env.BASE_URL}#${item.id}`}
               className="relative text-sm text-muted-foreground transition-colors hover:text-foreground focus-visible:outline after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-primary after:transition-transform after:duration-200 hover:after:scale-x-100"
             >
               {item.label}
@@ -86,7 +86,7 @@ export function SiteHeader() {
             {navSections.map((item) => (
               <a
                 key={item.id}
-                href={`/#${item.id}`}
+                href={`${import.meta.env.BASE_URL}#${item.id}`}
                 onClick={() => setMenuOpen(false)}
                 className="rounded-md px-3 py-3 text-sm text-muted-foreground hover:bg-secondary hover:text-foreground focus-visible:outline"
               >
