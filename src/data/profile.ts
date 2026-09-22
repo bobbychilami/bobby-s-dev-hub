@@ -82,7 +82,7 @@ export const aboutCards: AboutCard[] = [
 export const socialLinks = {
   github: null as string | null,
   linkedin: null as string | null,
-  resume: null as string | null,
+  resume: `${import.meta.env.BASE_URL}Bobby-Chilami-Resume.pdf`,
   email: null as string | null,
 };
 

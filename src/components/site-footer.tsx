@@ -17,7 +17,7 @@ function FooterAction({ label, href }: { label: string; href: string | null }) {
     <a
       href={href}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       className="inline-flex items-center gap-1 transition-colors hover:text-foreground focus-visible:outline"
     >
       {label}

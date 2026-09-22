@@ -57,7 +57,7 @@ export function SiteHeader() {
           <HeaderAction label="LinkedIn" href={socialLinks.linkedin} />
           {socialLinks.resume ? (
             <Button asChild variant="portfolio" size="sm">
-              <a href={socialLinks.resume} target="_blank" rel="noreferrer">
+              <a href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
                 Resume
               </a>
             </Button>
@@ -99,7 +99,7 @@ export function SiteHeader() {
             <HeaderAction label="LinkedIn" href={socialLinks.linkedin} />
             {socialLinks.resume ? (
               <Button asChild variant="portfolio" size="sm">
-                <a href={socialLinks.resume} target="_blank" rel="noreferrer">
+                <a href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
                   Resume
                 </a>
               </Button>

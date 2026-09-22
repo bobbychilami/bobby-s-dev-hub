@@ -170,7 +170,7 @@ function Portfolio() {
                   </Button>
                   {socialLinks.resume ? (
                     <Button asChild variant="portfolioOutline" size="lg">
-                      <a href={socialLinks.resume} target="_blank" rel="noreferrer">
+                      <a href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
                         Download Resume
                         <ArrowUpRight aria-hidden="true" />
                       </a>
@@ -475,7 +475,7 @@ function Portfolio() {
             )}
             {socialLinks.resume ? (
               <Button asChild variant="portfolioOutline">
-                <a href={socialLinks.resume} target="_blank" rel="noreferrer">
+                <a href={socialLinks.resume} target="_blank" rel="noopener noreferrer">
                   Download resume
                   <ArrowUpRight aria-hidden="true" />
                 </a>
